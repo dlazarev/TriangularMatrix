@@ -13,7 +13,8 @@ TMatrix::TMatrix(int _n)
 {
     // if UPLO = `U', a[i][j] is stored in AP(i+j(j-1)/2) for i<=j; (1 <= i,j <=N)
     // if UPLO = `L', a[i][j] is stored in AP( i+(2n-j)(j-1)/2) for i>=j; (1 <= i,j <=N)
-    
+    //
+
     N = _n;
     K = N * (N+1)/2;
     
