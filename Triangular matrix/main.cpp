@@ -2,17 +2,50 @@
 //  main.cpp
 //  Triangular matrix
 //
-//  Created by Dmitry Lazarev on 13.11.12.
-//  Copyright (c) 2012 Ilya Lazarev. All rights reserved.
-//
 
 #include <iostream>
+#include <stdlib.h>
+#include "TMatrix.h"
 
-int main(int argc, const char * argv[])
+using namespace std;
+
+int main()
 {
+    int n = 3;
+    double val;
+    
+    srandom((unsigned int)time(NULL));
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    TMatrix a(n);
+ /*
+    for (int i=0; i<n; i++)
+        for (int j=0; j<n; j++) {
+            if (i >= j) {
+                cout << "val[" << i << "][" << j <<"]=";
+                cin >> val;
+                a.set(i, j, val);
+            } else a.set(i, j, 0);
+        }
+*/
+  cout << "a matrix: " << endl;
+    a.print();
+
+    TMatrix b(n);
+    
+//    b.print();
+    
+    TMatrix c;
+    c = a * 2;
+    c.print();
+    
+//    TMatrix d;
+    
+//    d = c/a;
+//    d.print();
+    
+//    TMatrix e = a+b-c+d;
+//    e.print();
+//    std::cout << "Hello, World!\n";
     return 0;
 }
 
